@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web3 Universe</title>
+    <style>
+        /* Basic Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Body Styling */
+        body {
+            font-family: Arial, sans-serif;
+            color: white;
+            overflow-x: hidden;
+            background: radial-gradient(circle, rgba(25,0,50,1) 0%, rgba(10,0,30,1) 100%);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        /* Galaxy Background */
+        body::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('https://source.unsplash.com/1600x900/?galaxy,nebula,stars') no-repeat center center/cover;
+            opacity: 0.5;
+            z-index: -2;
+            animation: animateBackground 20s linear infinite alternate;
+        }
+
+        /* Cosmic Clouds Animation */
+        body::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(circle, rgba(0,0,0,0) 30%, rgba(0,0,30,0.8) 100%);
+            z-index: -1;
+            animation: moveClouds 60s ease-in-out infinite;
+        }
+
+        /* Navbar */
+        nav {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            padding: 20px 40px;
+            align-items: center;
+            background: rgba(0, 0, 30, 0.5);
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+            backdrop-filter: blur(10px);
+        }
+
+        /* Logo */
+        .logo {
+            font-size: 1.8em;
+            font-weight: bold;
+            color: silver;
+            text-shadow: 0px 0px 5px #00f7ff;
+        }
+
+        /* Navigation Buttons */
+        nav ul {
+            list-style: none;
+            display: flex;
+        }
+
+        nav ul li {
+            margin-left: 20px;
+        }
+
+        nav ul li a {
+            color: #d1d1d1;
+            text-decoration: none;
+            padding: 10px 20px;
+            transition: all 0.3s ease;
+            border-radius: 5px;
+        }
+
+        nav ul li a:hover {
+            color: white;
+            background: rgba(255, 255, 255, 0.1);
+            text-shadow: 0px 0px 5px #00f7ff;
+        }
+
+        /* Main Heading */
+        .content {
+            text-align: center;
+            padding-top: 100px;
+            max-width: 700px;
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        .content h1 {
+            font-size: 3em;
+            margin-bottom: 10px;
+            text-shadow: 0px 0px 10px rgba(0,255,255,0.7);
+        }
+
+        .content p {
+            font-size: 1.2em;
+            color: #c4c4c4;
+            margin-bottom: 30px;
+        }
+
+        /* Call to Action Button */
+        .cta-button {
+            display: inline-block;
+            padding: 15px 40px;
+            font-size: 1.2em;
+            color: white;
+            border: 2px solid #00f7ff;
+            border-radius: 25px;
+            text-decoration: none;
+            animation: pulse 2s infinite;
+            transition: all 0.3s ease;
+        }
+
+        .cta-button:hover {
+            background: rgba(0, 255, 255, 0.1);
+            box-shadow: 0 0 10px rgba(0, 255, 255, 0.5);
+        }
+
+        /* Keyframe Animations */
+        @keyframes animateBackground {
+            0% { transform: scale(1); }
+            100% { transform: scale(1.1); }
+        }
+
+        @keyframes moveClouds {
+            0% { background-position: 0 0; }
+            100% { background-position: 100px 100px; }
+        }
+
+        @keyframes fadeIn {
+            0% { opacity: 0; transform: translateY(20px); }
+            100% { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes pulse {
+            0%, 100% { box-shadow: 0 0 20px rgba(0, 247, 255, 0.5); }
+            50% { box-shadow: 0 0 5px rgba(0, 247, 255, 1); }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav>
+        <div class="logo">Web3 Universe</div>
+        <ul>
+            <li><a href="#explore">Explore</a></li>
+            <li><a href="#features">Features</a></li>
+            <li><a href="#join">Join</a></li>
+        </ul>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="content">
+        <h1>Welcome to the Web3 Universe</h1>
+        <p>Discover the infinite possibilities of decentralized technology. Step into a world where innovation and freedom meet.</p>
+        <a href="#launch" class="cta-button">Enter the Universe</a>
+    </div>
+
+</body>
+</html>
